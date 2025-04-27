@@ -1,23 +1,23 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CafeModule } from './cafe/cafe.module';
-import { CafeComponent } from "./cafe/cafe.component";
+
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environment.development';
-import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CafeModule,
-    HttpClientModule
+    HttpClientModule,
+    CafeModule
 ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

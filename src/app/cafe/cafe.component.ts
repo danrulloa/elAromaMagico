@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cafe } from './cafe';
 import { CafeService } from './cafe.service';
 
+
 @Component({
   selector: 'app-cafe',
   templateUrl: './cafe.component.html',

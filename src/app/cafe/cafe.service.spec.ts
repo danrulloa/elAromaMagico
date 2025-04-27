@@ -1,16 +1,19 @@
-/* tslint:disable:no-unused-variable */
-
-import { TestBed, waitForAsync, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CafeService } from './cafe.service';
 
-describe('Service: Cafe', () => {
+describe('CafeService', () => {
+  let service: CafeService;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], // Importa el módulo de pruebas HTTP
       providers: [CafeService]
     });
+    service = TestBed.inject(CafeService);
   });
 
-  it('should ...', inject([CafeService], (service: CafeService) => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
-  }));
+  });
 });
