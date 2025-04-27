@@ -1,0 +1,32 @@
+h1.titulo {
+    font-family: 'Indie Flower', cursive;
+    font-size: 36px;
+    margin-bottom: 2rem;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  hr {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+  }
+
+
+  
+  .table td, .table th {
+    font-size: 14px;
+  }
+  
+  p {
+    font-size: 12px;
+  }
+
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
