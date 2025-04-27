@@ -4,6 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CafeModule } from './cafe/cafe.module';
 import { CafeComponent } from "./cafe/cafe.component";
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment.development';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,7 @@ import { CafeComponent } from "./cafe/cafe.component";
     BrowserModule,
     AppRoutingModule,
     CafeModule,
+    HttpClientModule
 ],
   providers: [],
   bootstrap: [AppComponent]

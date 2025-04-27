@@ -1,3 +1,23 @@
-<p>
-  cafe works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Nombre</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Región</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cafe of cafes">
+          <td>{{ cafe.nombre }}</td>
+          <td>{{ cafe.tipo }}</td>
+          <td>{{ cafe.region }}</td>
+        </tr>
+        <tr *ngIf="cafes.length === 0">
+          <td colspan="3" class="text-center">No hay cafés disponibles</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
