@@ -1,23 +1,51 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Nombre</th>
-          <th class="h4">Tipo</th>
-          <th class="h4">Región</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let cafe of cafes">
-          <td>{{ cafe.nombre }}</td>
-          <td>{{ cafe.tipo }}</td>
-          <td>{{ cafe.region }}</td>
-        </tr>
-        <tr *ngIf="cafes.length === 0">
-          <td colspan="3" class="text-center">No hay cafés disponibles</td>
-        </tr>
-      </tbody>
-    </table>
+<div class="container mt-4">
+  <div class="row">
+
+    <div class="col-12 col-md-12">
+      <h1 class="titulo">El aroma mágico</h1>
+      <hr>
+    </div>
+
+
+    <div class="col-12 col-md-12">
+      <img src="app/cafe/assets/cafe.png" alt="Cafe" class="img-fluid mb-4">
+      <hr>
+    </div>
+
+
+    <div class="col-12 col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table-dark h4">#</th>
+            <th class="table-dark h4">Nombre</th>
+            <th class="table-dark h4">Tipo</th>
+            <th class="table-dark h4">Región</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cafe of cafes">
+            <td>{{ cafe.id }}</td>
+            <td>{{ cafe.nombre }}</td>
+            <td>{{ cafe.tipo }}</td>
+            <td>{{ cafe.region }}</td>
+          </tr>
+          <tr *ngIf="cafes.length === 0">
+            <td colspan="4" class="text-center">No hay cafés disponibles</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Total café de origen: {{ totalOrigen }}</p>
+      <p>Total café blend: {{ totalBlend }}</p>
+    </div>
+
+
+    <div class="col-12 col-md-12 mt-12">
+      <footer class="text-center">
+        Contact us: +57 3102105253 - info&#64;elaromamagico.com - &#64;elaromamagico
+      </footer>
+    </div>
+
   </div>
 </div>

@@ -9,16 +9,21 @@ import { CafeService } from './cafe.service';
   standalone: false
 })
 export class CafeComponent implements OnInit {
-  cafes: Array<Cafe> = []
+  cafes: Array<Cafe> = [];
+  totalOrigen = 0;
+  totalBlend = 0;
   constructor(private cafeService: CafeService) { }
 
   ngOnInit() {
     this.getCafes();
+
       }
   
   getCafes() {
-    this.cafeService.getCafes().subscribe(cafes => {
-        this.cafes = cafes;
-      });
+  this.cafeService.getCafes().subscribe(cafes => {
+    this.cafes = cafes;
+    this.totalOrigen = this.cafes.filter(cafe => cafe.tipo === 'Café de Origen').length;
+    this.totalBlend = this.cafes.filter(cafe => cafe.tipo === 'Blend').length;
+  });
     }
 }
