@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CafeComponent } from './cafe.component';
+import { Cafe } from './cafe';
 import { By } from '@angular/platform-browser';
 
 describe('CafeComponent', () => {
@@ -26,9 +27,9 @@ describe('CafeComponent', () => {
 
  it('should render a table with three rows plus the header', () => {
   component.cafes = [
-    { id: '1', nombre: 'Café 1', tipo: 'Café de Origen', region: 'Región 1' },
-    { id: '2', nombre: 'Café 2', tipo: 'Blend', region: 'Región 2' },
-    { id: '3', nombre: 'Café 3', tipo: 'Café de Origen', region: 'Región 3' },
+    new Cafe(1, 'Café 1', 'Café de Origen', 'Región 1', 'Cítrico', 1800, 'cafe-1.png'),
+    new Cafe(2, 'Café 2', 'Blend', 'Región 2', 'Caramelo', 1700, 'cafe-2.png'),
+    new Cafe(3, 'Café 3', 'Café de Origen', 'Región 3', 'Cacao', 1920, 'cafe-3.png'),
   ];
   fixture.detectChanges();
 
