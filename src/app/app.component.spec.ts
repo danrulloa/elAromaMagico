@@ -1,19 +1,19 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
 import { CafeComponent } from './cafe/cafe.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([]),
-        HttpClientTestingModule
-      ],
       declarations: [
         AppComponent,
         CafeComponent
+      ],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting()
       ],
     }).compileComponents();
   });
@@ -30,7 +30,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('elAromaMagico');
   });
 
-    it('should render title', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;

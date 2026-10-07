@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { CafeComponent } from './cafe.component';
 import { Cafe } from './cafe';
 import { By } from '@angular/platform-browser';
@@ -11,7 +12,7 @@ describe('CafeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [CafeComponent],
-      imports: [HttpClientTestingModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

@@ -1,3 +1,8 @@
+export enum TipoCafe {
+  Origen = 'Café de Origen',
+  Blend = 'Blend',
+}
+
 export class Cafe {
   public constructor(
     public id: number,
