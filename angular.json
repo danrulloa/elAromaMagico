@@ -34,10 +34,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
-                
-              },
-              "src/app/cafe/assets",
-              "src/app/cafe/assets/cafe.png"
+              }
             ],
             "styles": [
               "src/styles.css",
